@@ -38,6 +38,9 @@ export default function RecipieCards () {
             }
         }catch (error) {
             console.log(error)
+            setItemCard([])
+            setIsItemLoading(false)
+        } finally{
             setIsItemLoading(false)
         }
     }, [cleanUpItemCard])
@@ -46,13 +49,31 @@ export default function RecipieCards () {
         getRecipeItems()
     }, [getRecipeItems])
 
-    console.log(itemCard)
+    // console.log(itemCard)
 
-    // if (isItemLoading) {
-    //     return (
-    //         <div>Loading...</div>
-    //     )
-    // }
+    // We can use spinner css
+
+    if (isItemLoading) {
+        return (
+            <>
+            <div className="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>Loading</div>
+            </>
+        )
+    }
 
     // if (!Array.isArray(itemCard) || !itemCard.length){
     //     return null
