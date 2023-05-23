@@ -5,7 +5,11 @@ export default function ItemCard (props) {
         <div key={id}>
         <p>{itemTitle}</p>
         <p><img src={itemImage} alt={itemTitle} style={{width:'400px', height:'300px'}}/></p>
-        <p>{itemIngredients}</p>
+        <ul>
+        {itemIngredients.map((ingredient, index) => (
+          <li key={index}>{ingredient}</li>
+        ))}
+      </ul>
         <p>{itemInstructions}</p>
     </div>
     )

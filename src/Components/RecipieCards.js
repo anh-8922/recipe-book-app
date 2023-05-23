@@ -46,7 +46,7 @@ export default function RecipieCards () {
         getRecipeItems()
     }, [getRecipeItems])
 
-    // console.log(itemCard)
+    console.log(itemCard)
 
     // if (isItemLoading) {
     //     return (
