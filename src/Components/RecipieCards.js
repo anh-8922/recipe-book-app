@@ -16,7 +16,9 @@ export default function RecipieCards () {
             const itemTitle = fields.title
             const itemInstructions = fields.instructions
             const itemIngredients= fields.ingredients
-            const itemImage = fields.image.fields.file.url
+            // const itemImage = fields.image.fields.file.url
+            const itemImage = fields.image?.fields?.file?.url || ''
+
             const updatedItem = {id, itemTitle, itemIngredients, itemInstructions, itemImage}
             return updatedItem
         })
@@ -29,7 +31,7 @@ export default function RecipieCards () {
         try{
             const response = await Client.getEntries({content_type:'recipeBook'})
             const responseData= response.items
-            // console.log(responseData)
+            console.log(responseData)
             
             if(responseData) {
                 cleanUpItemCard(responseData)
