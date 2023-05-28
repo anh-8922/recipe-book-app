@@ -1,5 +1,5 @@
 import Nav from 'react-bootstrap/Nav';
-import '../css/styles.css';
+import './component.css';
 import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 export default function Sidebar() {
     return(
