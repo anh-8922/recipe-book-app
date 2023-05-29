@@ -13,7 +13,7 @@ function App() {
       backgroundImage: `url(${kitchen})`, 
       backgroundSize: "cover", 
       backgroundRepeat: "no-repeat", 
-      height: 'auto'}}>
+      height: '100vh'}}>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<WelcomePage/>}/>

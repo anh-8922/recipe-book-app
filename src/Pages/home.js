@@ -6,6 +6,7 @@ import eclair from '../Assets/eclair.jpg';
 import kebab from '../Assets/kebab.jpg';
 import salmon from '../Assets/salmon.jpg';
 import FlipCards from "../Components/FlipCard";
+import RecipeTabs from "../Components/RecipeTabs";
 
 export default function Home() {
     const [index, setIndex] = useState(0);
@@ -13,7 +14,7 @@ export default function Home() {
     return(
         <FirstLayout>
             <div id="home">
-                <section id="carousel"><FlipCards/></section>
+                <section id="carousel"><RecipeTabs/></section>
                   
             </div>
         </FirstLayout>

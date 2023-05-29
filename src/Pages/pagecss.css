@@ -1,4 +1,29 @@
+/*WELCOME PAGES
+ROUTE: "/"
+when the user enter the website, this will be the first landing.
+click on 'get started' button, user will access homepage*/
+#welcome {
+    width: 37rem;
+    height: 20rem;
+    position: absolute;
+    top: 27%;
+    right: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome > button {
+    background-color: #EB672F;
+    padding: 1rem;
+    
+}
 
+/*HOMEPAGE
+ROUTE: '/home'
+*/
 
 #home {
     width: 100%;
@@ -12,8 +37,13 @@
 
 #carousel {
     display: flex;
+    flex-direction: column;
     align-self: center;
-    margin: 3rem 5rem 0 0;
+    width: 55rem;
+    height: 30rem;
+    margin-right: 3rem;
+    background-color: bisque;
+    border-radius: 1rem;
 }
 
 #carousel-items {

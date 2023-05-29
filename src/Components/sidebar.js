@@ -1,13 +1,13 @@
 import Nav from 'react-bootstrap/Nav';
 import './component.css';
-import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 export default function Sidebar() {
     return(
         <Nav id='mainNav' defaultActiveKey="/home" className="flex-column">
-            <button id='nav-button'><BsFillArrowRightCircleFill style={{color: 'whitesmoke', fontSize: '3rem'}}/></button>
-            <Nav.Link id='navItems' href="/home">Active</Nav.Link>
-            <Nav.Link id='navItems' eventKey="link-1">Link</Nav.Link>
-            <Nav.Link id='navItems' eventKey="link-2">Link</Nav.Link>
+            <Nav.Link id='navItems' href="/home">Home</Nav.Link>
+            <Nav.Link id='navItems' eventKey="account">Account</Nav.Link>
+            <Nav.Link id='navItems' eventKey="help">Help</Nav.Link>
+            <Nav.Link id='navItems' eventKey="contact">Contact</Nav.Link>
+            <Nav.Link id='navItems' eventKey="about">About</Nav.Link>
             <Nav.Link id='navItems' eventKey="disabled" disabled>
                 Disabled
             </Nav.Link>
