@@ -4,6 +4,7 @@
 import { useState, useEffect, useCallback } from "react";
 import {Client} from './Client'
 import ItemCard from "./ItemCard";
+import Spinner from "./Spinner";
 
 export default function RecipieCards () {
     const [isItemLoading, setIsItemLoading] = useState (false)
@@ -57,23 +58,7 @@ export default function RecipieCards () {
 
     if (isItemLoading) {
         return (
-            <>
-            <div className="lds-spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div>Loading</div>
-            </>
+            <Spinner/>
         )
     }
 
