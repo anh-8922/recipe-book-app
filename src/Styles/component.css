@@ -1,0 +1,74 @@
+:root {
+    --orange-like-carrot: #E53F03;
+    --sweet-like-vanilla: #D4C79E;
+    --dark-is-coffee: #4E352B;
+    --raisen-black: #231F20;
+  }
+
+nav {
+    background-color: var(--orange-like-carrot);
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav a.active {
+    color: var(--raisen-black);
+    background-color: whitesmoke;
+    font-style: italic;
+}
+.nav-items {
+    border: 1px solid whitesmoke;
+    margin: 0.5rem 2rem 0 2rem;
+    padding: 1rem;
+    border-radius: 0 1rem 1rem 0;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#login-button {
+    margin: 2rem;
+    font-size: 1.5rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+/*CAROUSEL COMPONENT*/
+.carousel {
+    background-color: aqua;
+    overflow: hidden;
+    width: 80%;
+    margin-right: 3rem;
+}
+.carousel-items {
+    height: 30rem;
+    min-width: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    background-color: yellow;
+    
+}
+.internal-organ {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+.indicator {
+    display: flex;
+    justify-content: center;
+}
+.indicator > button {
+    margin: 0.5rem
+}
+
+/*RECIPE TABS COMPONENTS*/
+.recipe-tab {
+    width: 60rem;
+    height: 30rem;
+    background-color: #4E352B;
+    margin-right: 3rem;
+}

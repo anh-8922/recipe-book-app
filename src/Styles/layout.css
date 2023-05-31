@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    width: 100%;
+    
+}

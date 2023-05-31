@@ -1,22 +1,16 @@
-import FirstLayout from "../layouts/FirstLayout";
-import './pagecss.css';
-import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import eclair from '../Assets/eclair.jpg';
-import kebab from '../Assets/kebab.jpg';
-import salmon from '../Assets/salmon.jpg';
-import FlipCards from "../Components/FlipCard";
-import RecipeTabs from "../Components/RecipeTabs";
+import MainLayout from "../Layouts/MainLayout";
+import Carousel, {CarouselItems} from "../Components/Carousel";
 
 export default function Home() {
-    const [index, setIndex] = useState(0);
-    const handleSelect = (selectedIndex) => {setIndex(selectedIndex)};
     return(
-        <FirstLayout>
-            <div id="home">
-                <section id="carousel"><RecipeTabs/></section>
-                  
-            </div>
-        </FirstLayout>
+        <MainLayout>
+            <Carousel>
+                <CarouselItems>1</CarouselItems>
+                <CarouselItems>2</CarouselItems>
+                <CarouselItems>3</CarouselItems>
+                <CarouselItems>4</CarouselItems>
+                <CarouselItems>5</CarouselItems>
+            </Carousel>
+        </MainLayout>
     )
 }

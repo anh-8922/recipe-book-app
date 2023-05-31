@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import SignupForm from './SignupForm';
 
-import './component.css';
+import '../Styles/component.css';
 
 
 export default function Login() {
@@ -17,11 +17,7 @@ export default function Login() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}
-        style={{
-          margin: "2rem",
-          fontSize: "1.7rem"
-        }}>
+      <Button id="login-button" variant="primary" onClick={handleShow}>
        Sign up
       </Button>
       <Modal show={show} fullscreen={logInfo} onHide={() => setShow(false)} id="Recipe-board">

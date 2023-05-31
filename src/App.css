@@ -5,13 +5,6 @@
   color: whitesmoke;
 }
 
-:root {
-  --orange-like-carrot: #EB672F;
-  --sweet-like-vanilla: #D4C79E;
-  --dark-is-coffee: #4E352B;
-  --raisen-black: #231F20;
-}
-
 #main {
   height: 100vh;
   display: flex;
