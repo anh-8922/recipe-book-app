@@ -62,3 +62,18 @@ ROUTE: '/home'
     height: 10rem;
 }
 
+/*ABOUT PAGE | ROUTE: "/about"*/
+#about {
+ width: 60rem;
+ background-color: whitesmoke;
+ margin-right: 3rem;
+ border-radius: 1rem;
+}
+
+/*CONTACT PAGE | ROUTE: "/contact"*/
+#contact {
+    width: 60rem;
+    background-color: whitesmoke;
+    margin-right: 3rem;
+    border-radius: 1rem;
+   }
