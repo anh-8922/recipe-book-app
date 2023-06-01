@@ -1,11 +1,9 @@
 // import useFetch from "../CustomHook/FetchData";
-
-
 import { useState, useEffect, useCallback } from "react";
 import {Client} from './Client'
 import ItemCard from "./ItemCard";
 
-export default function RecipieCards () {
+export default function RecipeCards () {
     const [isItemLoading, setIsItemLoading] = useState (false)
     const [itemCard, setItemCard] = useState([])
 

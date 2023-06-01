@@ -1,0 +1,79 @@
+/*WELCOME PAGES
+ROUTE: "/"
+when the user enter the website, this will be the first landing.
+click on 'get started' button, user will access homepage*/
+#welcome {
+    width: 37rem;
+    height: 20rem;
+    position: absolute;
+    top: 27%;
+    right: 30%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#welcome > button {
+    background-color: #EB672F;
+    padding: 1rem;
+    
+}
+
+/*HOMEPAGE
+ROUTE: '/home'
+*/
+
+#home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    
+}
+
+
+#carousel {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 55rem;
+    height: 30rem;
+    margin-right: 3rem;
+    background-color: bisque;
+    border-radius: 1rem;
+}
+
+#carousel-items {
+    height: 29rem;
+    width: 45rem;
+}
+.carousel-img {
+    border-radius: 1rem;
+}
+.label {
+    color: var(--dark-is-coffee);
+}
+
+#caption {
+    background-color: #EB672F;
+    height: 10rem;
+}
+
+/*ABOUT PAGE | ROUTE: "/about"*/
+#about {
+ width: 60rem;
+ background-color: whitesmoke;
+ margin-right: 3rem;
+ border-radius: 1rem;
+}
+
+/*CONTACT PAGE | ROUTE: "/contact"*/
+#contact {
+    width: 60rem;
+    background-color: whitesmoke;
+    margin-right: 3rem;
+    border-radius: 1rem;
+   }
