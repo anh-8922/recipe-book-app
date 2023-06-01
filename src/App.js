@@ -32,7 +32,7 @@ function App() {
                     />
           <MainRecipieCards/>
           <Routes>
-            {/* <Route path='/' element={<HomePage/>}/> */}
+            <Route path='/' element={<HomePage/>}/>
             <Route path="/search" element={<SearchPage/>}/>
             <Route path= '/addnewrecipes' element = {<AddNewRecipePage/>} />
           </Routes>
