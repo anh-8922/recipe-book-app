@@ -11,6 +11,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import SearchPage from "./Pages/SearchPage";
 import AddNewRecipePage from "./Pages/AddNewRecipePage";
+import SingleRecipePage from "./Pages/SingleRecipePage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/search" element={<SearchPage/>}/>
             <Route path= '/addnewrecipes' element = {<AddNewRecipePage/>} />
+            <Route path="/singlerecipepage" element={<SingleRecipePage/>} />
           </Routes>
         </SearchContextFunction>
       </BrowserRouter>
