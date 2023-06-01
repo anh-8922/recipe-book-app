@@ -11,6 +11,9 @@ import {RiAddBoxFill} from 'react-icons/ri';
 import {RiMentalHealthFill} from 'react-icons/ri';
 import {RiFileInfoFill} from 'react-icons/ri';
 import {RiMailSendFill} from 'react-icons/ri';
+import SearchBar from "../Components/SearchBar";
+import SearchPage from "../Pages/SearchPage";
+import AddNewRecipePage from "../Pages/AddNewRecipePage";
 
 export default function Sidebar() {
     
@@ -20,8 +23,9 @@ export default function Sidebar() {
                 <NavLink to="/home"  className='nav-items'><RiHomeSmileLine/>Main Board</NavLink>
                 <NavLink to="/recipe" className="nav-items"><GiSecretBook/>Recipe</NavLink>
                 <NavLink   className="nav-items"><RiAddBoxFill/>Look up</NavLink>
-                <NavLink   className="nav-items"><RiAddBoxFill/>Add Recipe</NavLink>
+                <NavLink to='/addnewrecipes'  className="nav-items"><RiAddBoxFill/>Add Recipe</NavLink>
                 <NavLink   className="nav-items"><RiMentalHealthFill/>Tools</NavLink>
+                <NavLink to='/search' className="nav-items"><SearchBar/></NavLink>
                 <NavLink to="/about" className="nav-items"><RiFileInfoFill/>About</NavLink>
                 <NavLink to="/contact"  className="nav-items"><RiMailSendFill/>Contact</NavLink>
             </nav>
@@ -30,6 +34,8 @@ export default function Sidebar() {
                 <Route path="/recipe" element={<RecipePage />} />
                 <Route path="/about" element={<About/>}/>
                 <Route path="/contact" element={<Contact/>}/>
+                <Route path="/search" element={<SearchPage/>}/>
+                <Route path= '/addnewrecipes' element = {<AddNewRecipePage/>} />
             </Routes>                
         </>
     )
