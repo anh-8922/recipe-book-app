@@ -21,7 +21,7 @@ export default function Appetizer() {
   );
 
   return (
-    <div>
+    <div style={{display:'flex', gap:'2rem', flexWrap:'wrap'}}>
       {appetizerCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (

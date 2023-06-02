@@ -21,7 +21,7 @@ export default function SpecialRecipes() {
   );
 
   return (
-    <div>
+    <div style={{display:'flex', gap:'2rem', flexWrap:'wrap'}}>
       {specialRecipeCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (

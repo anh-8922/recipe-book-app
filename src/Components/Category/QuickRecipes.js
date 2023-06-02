@@ -21,7 +21,7 @@ export default function QuickRecipes() {
   );
 
   return (
-    <div>
+    <div style={{display:'flex', gap:'2rem', flexWrap:'wrap'}}>
       {quickRecipeCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (
