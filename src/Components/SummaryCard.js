@@ -6,7 +6,8 @@ export default function SummaryCard (props) {
         <div key={id}>
         <p><img src={itemImage} alt={itemTitle} style={{width:'400px', height:'300px'}}/></p>
         <p>{itemTitle}</p>
-        <p><Link to='/singlerecipepage'>Read more...</Link></p>
+        {/* <p><Link to='/singlerecipepage'>Read more...</Link></p> */}
+        <button onClick={props.onHandleClick}>Read more...</button>
     </div>
     )
 }

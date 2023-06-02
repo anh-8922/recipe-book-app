@@ -1,29 +1,77 @@
+// import useFetchCards from "../../CustomHook/FetchData";
+// import SummaryCard from "../SummaryCard";
+// import Spinner from "../Spinner";
+// import { useNavigate } from "react-router-dom";
+
+
+// export default function Appetizer () {
+//     const {itemCard, isItemLoading} =useFetchCards ()
+
+//     const navigate = useNavigate ()
+
+//     const HandleReadMore = () =>{
+//         navigate('/singlerecipepage')
+//     }
+
+//      if (isItemLoading){
+//         return(<Spinner/>)
+//      }
+
+//      const appetizerCard = itemCard.filter(item => item.itemCategory.toLowerCase() === 'appetizer');
+//      console.log(appetizerCard)
+
+//      return(
+//         <div>
+//             {appetizerCard.map((item) => {
+//                 const {id, itemImage, itemTitle} = item
+//                 return(
+                    
+//                    <SummaryCard key={id} 
+//                              itemTitle={itemTitle}
+//                              itemImage={itemImage}
+//                              onHandleClick={HandleReadMore}
+                            
+//                     />
+//                 )
+//             })}
+//         </div>
+//      )
+// }
+
 import useFetchCards from "../../CustomHook/FetchData";
 import SummaryCard from "../SummaryCard";
 import Spinner from "../Spinner";
+import { useNavigate } from "react-router-dom";
 
+export default function Appetizer() {
+  const { itemCard, isItemLoading } = useFetchCards();
+  const navigate = useNavigate();
 
-export default function Appetizer () {
-    const {itemCard, isItemLoading} =useFetchCards ()
-     if (isItemLoading){
-        return(<Spinner/>)
-     }
+  const handleReadMore = (id) => {
+    navigate(`/singlerecipepage/${id}`);
+  };
 
-     const appetizerCard = itemCard.filter(item => item.itemCategory.toLowerCase() === 'appetizer');
-     console.log(appetizerCard)
+  if (isItemLoading) {
+    return <Spinner />;
+  }
 
-     return(
-        <div>
-            {appetizerCard.map((item) => {
-                const {id, itemImage, itemTitle} = item
-                return(
-                    
-                   <SummaryCard key={id} 
-                             itemTitle={itemTitle}
-                             itemImage={itemImage}
-                    />
-                )
-            })}
-        </div>
-     )
+  const appetizerCard = itemCard.filter(
+    (item) => item.itemCategory.toLowerCase() === "appetizer"
+  );
+
+  return (
+    <div>
+      {appetizerCard.map((item) => {
+        const { id, itemImage, itemTitle } = item;
+        return (
+          <SummaryCard
+            key={id}
+            itemTitle={itemTitle}
+            itemImage={itemImage}
+            onHandleClick={() => handleReadMore(id)}
+          />
+        );
+      })}
+    </div>
+  );
 }

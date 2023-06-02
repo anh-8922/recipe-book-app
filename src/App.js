@@ -25,7 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/search" element={<SearchPage/>}/>
             <Route path= '/addnewrecipes' element = {<AddNewRecipePage/>} />
-            <Route path="/singlerecipepage" element={<SingleRecipePage/>} />
+            <Route path="/singlerecipepage/:id" element={<SingleRecipePage/>} />
           </Routes>
         </SearchContextFunction>
       </BrowserRouter>
