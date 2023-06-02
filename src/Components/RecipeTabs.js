@@ -2,6 +2,7 @@ import '../Styles/component.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
+
 export default function RecipeTabs() {
   return (
     <div className='recipe-tab'>

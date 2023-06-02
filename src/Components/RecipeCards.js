@@ -2,8 +2,9 @@
 import { useState, useEffect, useCallback } from "react";
 import {Client} from './Client'
 import ItemCard from "./ItemCard";
+import Spinner from "./Spinner";
 
-export default function RecipeCards () {
+export default function RecipieCards () {
     const [isItemLoading, setIsItemLoading] = useState (false)
     const [itemCard, setItemCard] = useState([])
 
@@ -14,10 +15,11 @@ export default function RecipeCards () {
             const itemTitle = fields.title
             const itemInstructions = fields.instructions
             const itemIngredients= fields.ingredients
+            const itemCategory = fields.category
             // const itemImage = fields.image.fields.file.url
             const itemImage = fields.image?.fields?.file?.url || ''
 
-            const updatedItem = {id, itemTitle, itemIngredients, itemInstructions, itemImage}
+            const updatedItem = {id, itemTitle, itemIngredients, itemInstructions, itemImage, itemCategory}
             return updatedItem
         })
 
@@ -29,7 +31,7 @@ export default function RecipeCards () {
         try{
             const response = await Client.getEntries({content_type:'recipeBook'})
             const responseData= response.items
-            console.log(responseData)
+            // console.log(responseData)
             
             if(responseData) {
                 cleanUpItemCard(responseData)
@@ -49,36 +51,14 @@ export default function RecipeCards () {
         getRecipeItems()
     }, [getRecipeItems])
 
-    // console.log(itemCard)
-
-    // We can use spinner css
 
     if (isItemLoading) {
         return (
-            <>
-            <div className="lds-spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div>Loading</div>
-            </>
+            <Spinner/>
         )
     }
 
-    // if (!Array.isArray(itemCard) || !itemCard.length){
-    //     return null
-    // }
-
+    
     return(
         <div>
             {itemCard.map((item) => {
