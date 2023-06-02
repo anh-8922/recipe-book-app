@@ -14,6 +14,7 @@ import {RiMailSendFill} from 'react-icons/ri';
 import SearchBar from "../Components/SearchBar";
 import SearchPage from "../Pages/SearchPage";
 import AddNewRecipePage from "../Pages/AddNewRecipePage";
+import SingleRecipePage from "../Pages/SingleRecipePage";
 
 export default function Sidebar() {
     
@@ -36,6 +37,7 @@ export default function Sidebar() {
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/search" element={<SearchPage/>}/>
                 <Route path= '/addnewrecipes' element = {<AddNewRecipePage/>} />
+                <Route path="/singlerecipepage/:id" element={<SingleRecipePage/>} />
             </Routes>                
         </>
     )

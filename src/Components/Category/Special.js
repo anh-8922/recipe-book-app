@@ -1,29 +1,38 @@
+
 import useFetchCards from "../../CustomHook/FetchData";
 import SummaryCard from "../SummaryCard";
 import Spinner from "../Spinner";
+import { useNavigate } from "react-router-dom";
 
+export default function SpecialRecipes() {
+  const { itemCard, isItemLoading } = useFetchCards();
+  const navigate = useNavigate();
 
-export default function SpecialRecipes () {
-    const {itemCard, isItemLoading} =useFetchCards ()
-     if (isItemLoading){
-        return(<Spinner/>)
-     }
+  const handleReadMore = (id) => {
+    navigate(`/singlerecipepage/${id}`);
+  };
 
-     const specialRecipeCard = itemCard.filter(item => item.itemCategory.toLowerCase() === 'special recipes');
-     console.log(specialRecipeCard)
+  if (isItemLoading) {
+    return <Spinner />;
+  }
 
-     return(
-        <div>
-            {specialRecipeCard.map((item) => {
-                const {id, itemImage, itemTitle} = item
-                return(
-                    
-                   <SummaryCard key={id} 
-                             itemTitle={itemTitle}
-                             itemImage={itemImage}
-                    />
-                )
-            })}
-        </div>
-     )
+  const specialRecipeCard = itemCard.filter(
+    (item) => item.itemCategory.toLowerCase() === "special recipes"
+  );
+
+  return (
+    <div>
+      {specialRecipeCard.map((item) => {
+        const { id, itemImage, itemTitle } = item;
+        return (
+          <SummaryCard
+            key={id}
+            itemTitle={itemTitle}
+            itemImage={itemImage}
+            onHandleClick={() => handleReadMore(id)}
+          />
+        );
+      })}
+    </div>
+  );
 }
