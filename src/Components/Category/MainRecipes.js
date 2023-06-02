@@ -81,7 +81,7 @@ import SummaryCard from "../SummaryCard";
 import Spinner from "../Spinner";
 
 
-export default function Desserts () {
+export default function MainRecipeCards () {
     const {itemCard, isItemLoading} =useFetchCards ()
      if (isItemLoading){
         return(<Spinner/>)

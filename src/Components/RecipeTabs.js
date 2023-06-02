@@ -1,7 +1,7 @@
 import '../Styles/component.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
+import Appetizer from './Category/Appetizer';
 
 export default function RecipeTabs() {
   return (
@@ -13,7 +13,7 @@ export default function RecipeTabs() {
         className="mb-3"
       >
             <Tab eventKey="contact" title="" disabled></Tab>
-            <Tab eventKey="home" title="Appetizer">Appetizer</Tab>
+            <Tab eventKey="home" title="Appetizer"><Appetizer/></Tab>
             <Tab eventKey="main" title="Main">Main</Tab>
             <Tab eventKey="dessert" title="Dessert">Dessert</Tab>
             <Tab eventKey="special" title="Specials">Specials</Tab>
