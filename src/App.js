@@ -1,22 +1,27 @@
-
-//import logo from './logo.svg';
-//import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import kitchen from './Assets/kitchen.jpg';
-import './css/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from "./Pages/home";
+import Home from './Pages/Home';
+import WelcomePage from "./Pages/Welcome";
+import RecipePage from "./Pages/Recipe";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
+
+  
   return (
-    <div id="main" style={{ backgroundImage: `url(${kitchen})`, backgroundSize: "cover", height: '100vh'}}>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<WelcomePage/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/recipe" element={<RecipePage/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </BrowserRouter>
-    </div>
-  );
+  )
 }
+ 
+
 
 export default App;

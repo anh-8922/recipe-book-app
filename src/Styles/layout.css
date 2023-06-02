@@ -1,0 +1,22 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+.side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 2rem 3rem 2rem 0;
+}
+.content {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+    width: 100%;
+    
+}
