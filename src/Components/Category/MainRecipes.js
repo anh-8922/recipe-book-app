@@ -21,7 +21,7 @@ export default function MainRecipes() {
   );
 
   return (
-    <div>
+    <div className="category-group">
       {mainCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (

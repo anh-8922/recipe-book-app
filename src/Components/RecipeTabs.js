@@ -7,6 +7,7 @@ import Desserts from './Category/Dessert';
 import SpecialRecipes from './Category/Special';
 import QuickRecipes from './Category/QuickRecipes';
 
+
 export default function RecipeTabs() {
   return (
     <div className='recipe-tab'>

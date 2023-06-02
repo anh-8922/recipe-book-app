@@ -7,7 +7,7 @@
 
 nav {
     background-color: var(--orange-like-carrot);
-    height: 100vh;
+    height: auto;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ nav a.active {
     margin-right: 3rem;
 }
 .carousel-items {
-    height: 30rem;
+    height: 27rem;
     min-width: 100%;
     width: 100%;
     display: inline-flex;
@@ -68,9 +68,9 @@ nav a.active {
 
 /*RECIPE TABS COMPONENTS*/
 .recipe-tab {
-    width: 60rem;
-    height: 30rem;
-    background-color: #4E352B;
+    width: 55rem;
+    height: 32rem;
+    background-color: var(--sweet-like-vanilla);
     margin-right: 3rem;
 }
 
@@ -119,4 +119,37 @@ nav a.active {
 
 .search-box:hover{
   animation: hoverShake 0.15s linear 3;
+}
+
+/*SUMMARY CARD COMPONENTS*/
+#category-img {
+    width: 11rem;
+    height: 8rem;
+    border-radius: 0.3rem;
+}
+.category-items {
+    color: var(--raisen-black);
+    font-weight: bold;
+    width: 11rem;
+    height: 11rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+.category-items ~ button {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    background-color: var(--dark-is-coffee);
+    color: whitesmoke;
+}
+
+/*ITEM CARD COMPONENTS*/
+.item-card {
+    margin: 2rem 5rem 2rem 4rem;
+}
+.item-card > h1 {
+    margin-bottom: 2rem;
+}
+.group-1 {
+    display: flex;
+    flex-direction: row;
 }

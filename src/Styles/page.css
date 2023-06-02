@@ -77,3 +77,9 @@ ROUTE: '/home'
     margin-right: 3rem;
     border-radius: 1rem;
    }
+
+
+/*SINGLE RECIPE PAGE | ROUTE: "/singlerecipepage/..."*/
+.single-page{
+    background-color: whitesmoke;
+}
