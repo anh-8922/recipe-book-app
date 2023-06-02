@@ -60,4 +60,6 @@ export default function  SearchBar ({children}) {
             <button className="btn-search" onClick={handleSearch}>Search</button>
         </div>
     )
+
 }
+
