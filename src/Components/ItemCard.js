@@ -2,7 +2,7 @@ export default function ItemCard (props) {
     const {id, itemImage, itemIngredients, itemInstructions, itemTitle} =props
 
     return (
-        <div key={id}>
+        <div key={id} style={{backgroundColor:'white'}}>
         <p>{itemTitle}</p>
         <p><img src={itemImage} alt={itemTitle} style={{width:'400px', height:'300px'}}/></p>
         <ul>

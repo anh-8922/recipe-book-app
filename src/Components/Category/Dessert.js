@@ -21,7 +21,7 @@ export default function Desserts() {
   );
 
   return (
-    <div>
+    <div style={{display:'flex', gap:'2rem', flexWrap:'wrap'}}>
       {dessertsCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (
