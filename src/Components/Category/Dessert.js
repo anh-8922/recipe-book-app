@@ -1,4 +1,4 @@
-
+import './category.css';
 import useFetchCards from "../../CustomHook/FetchData";
 import SummaryCard from "../SummaryCard";
 import Spinner from "../Spinner";

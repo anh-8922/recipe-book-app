@@ -1,4 +1,4 @@
-
+import './category.css';
 import useFetchCards from "../../CustomHook/FetchData";
 import SummaryCard from "../SummaryCard";
 import Spinner from "../Spinner";
@@ -21,7 +21,7 @@ export default function QuickRecipes() {
   );
 
   return (
-    <div>
+    <div className='category-group'>
       {quickRecipeCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (

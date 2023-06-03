@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { SearchContext } from "../Context/SearchContext";
 import { useNavigate } from 'react-router-dom';
-
+import '../Styles/component.css';
+import {BsSearch} from 'react-icons/bs';
 
 export default function  SearchBar ({children}) {
 
@@ -26,7 +27,7 @@ export default function  SearchBar ({children}) {
                    placeholder="Search..."
                    value={searchQuery}
                    onChange={(e) => setSearchQuery(e.target.value)}/>
-            <button className="btn-search" onClick={handleSearch}>Search</button>
+            <button className="btn-search" onClick={handleSearch}><BsSearch/></button>
         </div>
     )
 }
