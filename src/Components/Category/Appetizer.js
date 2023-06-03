@@ -22,7 +22,9 @@ export default function Appetizer() {
   );
 
   return (
+
     <div className="category-group">
+
       {appetizerCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         return (
