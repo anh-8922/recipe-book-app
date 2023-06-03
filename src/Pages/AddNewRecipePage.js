@@ -1,8 +1,8 @@
-
+import '../Styles/page.css';
 import { useState } from "react";
 import noimage from '../Assets/noimage.png'
 import axios from "axios";
-import MainLayout from "../Layouts/MainLayout";
+import SecondLayout from "../Layouts/SecondLayout";
 
 export default function AddNewRecipePage() {
   const spaceID = process.env.REACT_APP_SPACE_ID;
@@ -115,58 +115,60 @@ export default function AddNewRecipePage() {
   };
 
   return (
-    <MainLayout>
-        <div>
-          <p>
-            Category:{" "}
-            <input
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            />
-          </p>
-          <p>
-            Recipe Title: {""}{" "}
-            <input
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </p>
-          <div>
-            <label className="cursor-pointer">
-              Add image
+    <SecondLayout>
+        <div className="AddNewRecipe">
+          <div className='AddRecipeBox'>
+            <p>
+              Category:{" "}
               <input
-                id="file"
-                type="file"
-                className="hidden"
-                onChange={handleImageChange}
-                accept="image/png"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
               />
-            </label>
+            </p>
+            <p>
+              Recipe Title: {""}{" "}
+              <input
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </p>
+            <div>
+              <label className="cursor-pointer">
+                Add image
+                <input
+                  id="file"
+                  type="file"
+                  className="hidden"
+                  onChange={handleImageChange}
+                  accept="image/png"
+                />
+              </label>
+            </div>
+            <div>
+              <img
+                className="w-[300px] h-[300px] object-cover"
+                src={image.url || noimage}
+                alt=""
+              />
+            </div>
+            <p>
+              Ingredients:{" "}
+              <input
+                value={ingredients}
+                onChange={(e) => setIngredients(e.target.value)}
+              />
+            </p>
+            <p>
+              Instructions:{" "}
+              <textarea
+                value={instructions}
+                onChange={(e) => setInstructions(e.target.value)}
+              ></textarea>
+            </p>
+            <button onClick={handlePost}>Post</button>
           </div>
-          <div>
-            <img
-              className="w-[300px] h-[300px] object-cover"
-              src={image.url || noimage}
-              alt=""
-            />
-          </div>
-          <p>
-            Ingredients:{" "}
-            <input
-              value={ingredients}
-              onChange={(e) => setIngredients(e.target.value)}
-            />
-          </p>
-          <p>
-            Instructions:{" "}
-            <textarea
-              value={instructions}
-              onChange={(e) => setInstructions(e.target.value)}
-            ></textarea>
-          </p>
-          <button onClick={handlePost}>Post</button>
         </div>
-    </MainLayout>
+    </SecondLayout>
   );
 }
 

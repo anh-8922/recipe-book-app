@@ -13,6 +13,7 @@ import SearchPage from "./Pages/SearchPage";
 import AddNewRecipePage from "./Pages/AddNewRecipePage";
 import SingleRecipePage from "./Pages/SingleRecipePage";
 
+
 function App() {
   return (
       <BrowserRouter>
@@ -26,6 +27,7 @@ function App() {
             <Route path="/search" element={<SearchPage/>}/>
             <Route path= '/addnewrecipes' element = {<AddNewRecipePage/>} />
             <Route path="/singlerecipepage/:id" element={<SingleRecipePage/>} />
+            
           </Routes>
         </SearchContextFunction>
       </BrowserRouter>

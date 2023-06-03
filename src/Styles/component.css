@@ -7,17 +7,19 @@
 
 nav {
     background-color: var(--orange-like-carrot);
-    height: 100vh;
+    height: auto;
     width: 20%;
     display: flex;
     flex-direction: column;
-
+    
 }
 
 nav a.active {
-    border: 1px solid whitesmoke;
-    background: none;
+    font-weight: bold;
+    background-color: var(--sweet-like-vanilla);
     font-style: italic;
+    border: 2px solid #D4C79E;
+    border-style: groove;
 }
 .nav-items {
     
@@ -29,13 +31,34 @@ nav a.active {
     background-color: whitesmoke;
 }
 
+#logo {
+    background-color: whitesmoke;
+    border-radius: 50%;
+    width: max-content;
+    display: flex;
+    align-self: center;
+    margin: 1rem 0;
+    border: 4px solid #4E352B;
+    border-style: inset;
+}
+
+/*LOGIN COMPONENT*/
 #login-button {
-    
-    font-size: 1.5rem;
-    width: 10rem;
+    background-color: var(--orange-like-carrot);
+    border: 4px solid #b1978c;
+    border-style: groove;
+    font-size: 1.2rem;
+    width: 8rem;
     display: flex;
     justify-content: center;
     align-self: flex-end;
+    font-weight: bold;
+}
+#login-button:hover {
+    background-color: var(--sweet-like-vanilla);
+    color: var(--dark-is-coffee);
+    border: 4px solid #b1978c;
+    border-style: inset;
 }
 
 /*CAROUSEL COMPONENT*/
@@ -46,7 +69,7 @@ nav a.active {
     margin-right: 3rem;
 }
 .carousel-items {
-    height: 30rem;
+    height: 27rem;
     min-width: 100%;
     width: 100%;
     display: inline-flex;
@@ -68,55 +91,66 @@ nav a.active {
 
 /*RECIPE TABS COMPONENTS*/
 .recipe-tab {
-    width: 60rem;
-    height: 30rem;
-    background-color: #4E352B;
+    width: 55rem;
+    height: 32rem;
+    background-color: var(--sweet-like-vanilla);
     margin-right: 3rem;
 }
 
 /*SEARCH BAR COMPONENTS*/
-.search-box {
-    background: #fff;
-    height: 30px;
-    border-radius: 30px;
-    padding: 10px 20px;
+.SearchInput {
+    background-color: whitesmoke;
+    width: 10.3rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.8s;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+    flex-direction: row;
+    margin-left: 2rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    padding: 4px;
+    
 }
-
-.search-box:hover > input{
-    width: 400px;
-}
-
-.search-box input{
-    background: transparent;
+.SearchInput > input {
+    background: none;
     border: none;
-    outline:none;
-    width: 0px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.8s;
-
+    width: 8rem;
+}
+.SearchInput > button {
+    background: none;
+    border: none;
+}
+#search.active {
+    border: none
 }
 
-.search-box button .fas{
-    color: #5cbdbb;
+/*SUMMARY CARD COMPONENTS*/
+#category-img {
+    width: 11rem;
+    height: 8rem;
+    border-radius: 0.3rem;
+}
+.category-items {
+    color: var(--raisen-black);
+    font-weight: bold;
+    width: 11rem;
+    height: 11rem;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+.category-items ~ button {
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    background-color: var(--dark-is-coffee);
+    color: whitesmoke;
 }
 
-@keyframes hoverShake {
-  0% {transform: skew(0deg,0deg);}
-  25% {transform: skew(5deg, 5deg);}
-  75% {transform: skew(-5deg, -5deg);}
-  100% {transform: skew(0deg,0deg);}
+/*ITEM CARD COMPONENTS*/
+.item-card {
+    margin: 2rem 5rem 2rem 4rem;
 }
-
-.search-box:hover{
-  animation: hoverShake 0.15s linear 3;
+.item-card > h1 {
+    margin-bottom: 2rem;
+}
+.group-1 {
+    display: flex;
+    flex-direction: row;
 }
