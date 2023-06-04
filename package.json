@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.16.5",
+    "@contentful/rich-text-types": "^16.2.0",
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -19,6 +21,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
+    "react-linkify": "^1.0.0-alpha",
     "react-pageflip": "^2.0.3",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
