@@ -5,16 +5,17 @@
     --raisen-black: #231F20;
   }
 
-nav {
+.navBar {
     background-color: var(--orange-like-carrot);
-    height: auto;
-    width: 20%;
+    height: 120vh;
+    width: 23%;
     display: flex;
     flex-direction: column;
-    
+    border-right: 5px solid #b1978c;
+    border-right-style: groove;
 }
 
-nav a.active {
+.navBar a.active {
     font-weight: bold;
     background-color: var(--sweet-like-vanilla);
     font-style: italic;
@@ -92,15 +93,17 @@ nav a.active {
 /*RECIPE TABS COMPONENTS*/
 .recipe-tab {
     width: 55rem;
-    height: 32rem;
+    height: max-content;
     background-color: var(--sweet-like-vanilla);
     margin-right: 3rem;
+    padding: 0 1rem 2rem 1rem;
+    border-radius: 0.7rem;
 }
 
 /*SEARCH BAR COMPONENTS*/
 .SearchInput {
     background-color: whitesmoke;
-    width: 10.3rem;
+    width: 11.5rem;
     display: flex;
     flex-direction: row;
     margin-left: 2rem;
@@ -119,7 +122,8 @@ nav a.active {
     border: none;
 }
 #search.active {
-    border: none
+    border: none;
+    background: none;
 }
 
 /*SUMMARY CARD COMPONENTS*/

@@ -4,7 +4,7 @@ import { SearchContext } from '../Context/SearchContext';
 import { Client } from '../Components/Client';
 import ItemCard from '../Components/ItemCard';
 import Spinner from '../Components/Spinner';
-import MainLayout from '../Layouts/MainLayout';
+import SearchLayout from '../Layouts/SearchLayout';
 
 export default function SearchPage() {
   const { searchQuery } = useContext(SearchContext);
@@ -44,7 +44,7 @@ export default function SearchPage() {
   }, [getRecipeItems, searchQuery]);
 
   return (
-    <MainLayout>
+    <SearchLayout>
         <div>
           {isItemLoading ? (
             <div>
@@ -72,6 +72,6 @@ export default function SearchPage() {
             </div>
           )}
         </div>
-    </MainLayout>
+    </SearchLayout>
   );
 }

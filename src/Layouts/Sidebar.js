@@ -22,8 +22,8 @@ export default function Sidebar() {
     
     return (
         <>
-            <nav>
-                <div id="logo"><img style={{width: '10rem'}} src={heartlogo}/></div>
+            <div className="navBar">
+                <div id="logo"><img style={{width: '11.5rem'}} src={heartlogo}/></div>
                 <NavLink to='/search' id="search"><SearchBar/></NavLink>                                                                        
                 <NavLink to="/home"  className='nav-items'><RiHomeSmileLine/>Main Board</NavLink>
                 <NavLink to="/recipe" className="nav-items"><GiSecretBook/>Recipe</NavLink>
@@ -31,7 +31,7 @@ export default function Sidebar() {
                 <NavLink   className="nav-items"><RiMentalHealthFill/>Tools</NavLink>   
                 <NavLink to="/about" className="nav-items"><RiFileInfoFill/>About</NavLink>
                 <NavLink to="/contact"  className="nav-items"><RiMailSendFill/>Contact</NavLink>
-            </nav>
+            </div>
             <Routes>
                 <Route exact path="/home" element={<Home />} />
                 <Route path="/recipe" element={<RecipePage />} />
