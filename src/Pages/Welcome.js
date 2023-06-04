@@ -1,6 +1,7 @@
 import label from '../Assets/label.png'
 import '../Styles/page.css';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+// import { Routes, Route, useNavigate } from "react-router-dom";
 //import Home from './home';
 
 export default function WelcomePage() {
@@ -13,16 +14,15 @@ export default function WelcomePage() {
             <div id='welcome' style={{backgroundImage: `url(${label})`}}>
                 <button onClick={navigateToPage}>Get Started</button>
             </div>
-            <Routes>
+            {/* <Routes>
                 
                 
                 
-            </Routes>
+            </Routes> */}
             
         </>
     )
 }
-//<Route path="/home" element={<Home/>}/>
 
 
 

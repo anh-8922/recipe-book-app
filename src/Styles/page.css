@@ -31,6 +31,7 @@ ROUTE: '/home'
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-end;
+   
     
 }
 
@@ -86,19 +87,25 @@ ROUTE: '/home'
     justify-content: flex-start;
     margin: 2rem 7rem;
 }
-#name-email {
 
-}
+/* #name-email {
+
+} */
+
 #name-email > input{
     height: 3rem;
     width: 19rem;
     padding: 1rem;
 }
 /*SINGLE RECIPE PAGE | ROUTE: "/singlerecipepage/..."*/
+/* background color change ===> Lakmali */
 .single-page{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke;
+    opacity: 0.9;  */
     height: 100vh;
+    width: 100vw;
 }
+
 
 /*ADD NEW RECIPES PAGE | ROUTE: "/addnewrecipes/..."*/
 .AddNewRecipe {
@@ -109,3 +116,5 @@ ROUTE: '/home'
 .AddRecipeBox {
     margin: 3rem 2rem 3rem 10rem; 
 }
+
+/* SEARCH PAGE |ROTE: "/search/..... */

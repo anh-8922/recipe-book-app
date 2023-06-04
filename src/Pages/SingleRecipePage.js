@@ -31,7 +31,12 @@ export default function SingleRecipePage() {
           itemInstructions={itemInstructions}
         />
         <Link to="/recipe">
-          <button>Back to Recipes</button>
+          <button style={{
+                        fontSize:'1.5rem', 
+                        backgroundColor:'#D4C79E', 
+                        marginLeft:'5rem', 
+                        padding:'0.8rem',
+                        borderRadius:'0.5rem'}}>Back to Recipes</button>
         </Link>
       </div>
     </SecondLayout>
