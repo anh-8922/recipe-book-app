@@ -51,7 +51,10 @@ export default function SearchPage() {
               <Spinner />
             </div>
           ) : (
-            <div>
+            <div style={{display:'flex',
+                         flexDirection:'column',
+                         justifyContent:'center',
+                         alignItems:'center'}}>
               {itemCard.map((item, index) => {
                 const {fields } = item;
                 const itemTitle = fields?.title || '';

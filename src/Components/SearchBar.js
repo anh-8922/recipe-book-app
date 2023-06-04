@@ -13,7 +13,8 @@ export default function  SearchBar ({children}) {
         e.preventDefault();
         if (searchQuery.trim() !== '') {
           setSearchQuery(searchQuery);
-          navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
+          navigate(`/search?q=${searchQuery}`)
+          // navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
         } else {
           alert('Please enter valid text.');
         }
