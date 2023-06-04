@@ -5,7 +5,11 @@ import Linkify from 'react-linkify';
 
 const CustomLinkify = ({ children }) => (
   <Linkify componentDecorator={(decoratedHref, decoratedText, key) => (
-    <a href={decoratedHref} key={key} target="_blank" rel="noopener noreferrer">
+    <a href={decoratedHref} 
+       key={key} 
+       target="_blank" 
+       rel="noopener noreferrer"
+       style={{ textDecoration: 'none' }} >
       {decoratedText}
     </a>
   )}>
@@ -32,8 +36,8 @@ export default function ItemCard(props) {
         </ul>
       </div>
       <div>
-        <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'sans-serif', fontSize: '1rem', padding: '1rem 2rem' }}>
-          <CustomLinkify>{itemInstructions}</CustomLinkify>
+        <pre style={{ whiteSpace: 'pre-wrap', fontFamily: 'sans-serif', fontSize: '1rem', padding: '1rem 2rem',   }}>
+          <CustomLinkify >{itemInstructions}</CustomLinkify>
         </pre>
       </div>
     </div>
