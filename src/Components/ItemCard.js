@@ -1,5 +1,5 @@
-
 import Linkify from 'react-linkify';
+import '../Styles/component.css';
 
 // const LineBreak = () => <br />;
 
