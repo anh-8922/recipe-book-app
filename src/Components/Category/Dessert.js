@@ -37,7 +37,7 @@ export default function Desserts(props) {
   );
 
   return (
-    <div style={{display:'flex', gap:'2rem', flexWrap:'wrap'}}>
+    <div className="category-group">
       {dessertsCard.map((item) => {
         const { id, itemImage, itemTitle } = item;
         const ratingValue = ratings.get(id) || 0;

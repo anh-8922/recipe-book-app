@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/layout.css';
 import Sidebar from "./Sidebar";
-import Login from "../Components/Login";
+import LoginButton from "../Components/LoginButton";
 
 
 export default function MainLayout({children}) {
@@ -9,7 +9,7 @@ export default function MainLayout({children}) {
         <div className="main">
             <Sidebar/>
             <div className="side">
-                <div className="top"><Login/></div>
+                <div className="top"><LoginButton/></div>
                 <div className="content">{children}</div>
             </div>            
         </div>
